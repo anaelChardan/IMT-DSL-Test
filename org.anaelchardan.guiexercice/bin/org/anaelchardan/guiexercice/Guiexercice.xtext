@@ -1,0 +1,26 @@
+grammar org.anaelchardan.guiexercice.Guiexercice with org.eclipse.xtext.common.Terminals
+
+generate guiexercice "http://www.anaelchardan.org/guiexercice/Guiexercice"
+
+Program: frame=Frame;
+
+Frame:
+	'frame' name=ID '{'
+		(
+			('title' ':' title=STRING) &
+			('width' ':' width=INT) &
+			('height' ':' height=INT) &
+			('content' '{' contents+=Content* '}')
+		)
+	'}'
+;
+
+Content: Label | Button ;
+
+Label:
+  'label' ':' label=STRING
+;
+
+Button:
+  'button' ':' button=STRING
+;

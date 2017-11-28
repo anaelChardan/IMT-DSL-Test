@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.anaelchardan.guiexercice
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.anaelchardan.guiexercice; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.anaelchardan.guiexercice.services,
+ org.anaelchardan.guiexercice.guiexercice.impl,
+ org.anaelchardan.guiexercice.guiexercice.util,
+ org.anaelchardan.guiexercice.generator,
+ org.anaelchardan.guiexercice.guiexercice,
+ org.anaelchardan.guiexercice.scoping,
+ org.anaelchardan.guiexercice.parser.antlr.internal,
+ org.anaelchardan.guiexercice.serializer,
+ org.anaelchardan.guiexercice.parser.antlr,
+ org.anaelchardan.guiexercice,
+ org.anaelchardan.guiexercice.validation
+Import-Package: org.apache.log4j

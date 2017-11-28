@@ -1,0 +1,30 @@
+grammar org.anaelchardan.guiexerciceadvanced.GuiexerciceAdvanced with org.eclipse.xtext.common.Terminals
+
+generate guiexerciceAdvanced "http://www.anaelchardan.org/guiexerciceadvanced/GuiexerciceAdvanced"
+
+Program: frames+=Frame+;
+
+Frame:
+	'frame' frameName=FrameName '{'
+		(
+			('title' ':' title=STRING) &
+			('width' ':' width=INT) &
+			('height' ':' height=INT) &
+			('content' '{' contents+=Content* '}')
+		)
+	'}'
+;
+
+FrameName:
+    name=ID
+;
+
+Content: Label | Button ;
+
+Label:
+  'label' ':' label=STRING
+;
+
+Button:
+  'button' ':' button=STRING '->' to=[FrameName]
+;

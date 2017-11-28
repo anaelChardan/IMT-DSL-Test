@@ -1,0 +1,10 @@
+frame A {
+title: "Frame A" width: 200 height: 100 content {
+label: "Hello"
+button: "..." -> B }
+}
+frame B {
+title: "Frame B" width: 300 height: 100 content {
+label: "...World!"
+button: "Restart" -> A }
+}
